@@ -29,12 +29,12 @@ export function AuthShell({ children }: { children: ReactNode }) {
 				<p className="relative font-mono text-xs/4 text-muted-foreground">
 					Made with love by{" "}
 					<a
-						href="https://trycomp.ai"
+						href="https://github.com/happyhunterdigital"
 						target="_blank"
 						rel="noreferrer"
 						className="underline underline-offset-4 hover:text-foreground"
 					>
-						Comp AI
+						Happy Hunter Digital
 					</a>
 				</p>
 			</section>

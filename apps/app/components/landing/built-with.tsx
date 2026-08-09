@@ -19,7 +19,7 @@ export function BuiltWith() {
 						<NextjsLogo className="size-[26px] shrink-0" />
 						Next.js
 					</li>
-					<li className="flex items-center gap-3">Context</li>
+					<li className="flex items-center gap-3">Postgres</li>
 					<li className="flex items-center gap-3">
 						<EveLogo aria-label="eve" className="h-[26px] w-[82px] shrink-0" />
 					</li>

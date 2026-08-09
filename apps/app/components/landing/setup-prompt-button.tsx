@@ -8,7 +8,7 @@ import { useState } from "react";
 import { type CtaLocation, captureLanding } from "./analytics";
 
 const SETUP_PROMPT =
-	"Set up trycompai/crm — install the dependencies, start Postgres, create my .env, and tell me which keys I still need.";
+	"Set up happyhunterdigital/crm — install the dependencies, start Postgres, create my .env, and tell me which keys I still need.";
 
 /**
  * The page's leading action: hand the whole setup to a coding agent. It stands

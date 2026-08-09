@@ -173,7 +173,7 @@ export function ShareChatDialog({
 							/>
 							<ShareChoice
 								selected={shared === true}
-								label="Anyone in Comp AI with the link"
+								label="Anyone in Smart Marketing with the link"
 								detail="Read-only"
 								disabled={createAction.pending || revokeAction.pending}
 								onSelect={() => {

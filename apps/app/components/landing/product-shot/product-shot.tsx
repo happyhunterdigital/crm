@@ -61,7 +61,7 @@ function AppHeader() {
 				</span>
 				<span className="mx-1 h-5 w-px shrink-0" />
 				<span className="line-clamp-1 font-medium text-sm/[142%]">
-					Comp AI CRM
+					Smart Marketing CRM
 				</span>
 			</div>
 

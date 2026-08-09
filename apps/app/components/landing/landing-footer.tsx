@@ -10,7 +10,7 @@ export function LandingFooter() {
 				<div className="flex w-[280px] max-w-full shrink-0 flex-col gap-[14px]">
 					<Wordmark />
 					<p className="text-[13px]/[21px] text-muted-foreground">
-						The open source agentic CRM.
+						The agentic CRM built by Happy Hunter Digital.
 					</p>
 				</div>
 
@@ -39,11 +39,11 @@ export function LandingFooter() {
 						Built with love by
 						<Logo className="size-[13px] shrink-0 text-foreground" />
 						<Link
-							href="https://trycomp.ai?utm_source=crm_landing_footer&utm_medium=referral"
+							href="https://github.com/happyhunterdigital"
 							target="_blank"
 							className="font-medium text-foreground"
 						>
-							Comp AI
+							Happy Hunter Digital
 						</Link>
 					</p>
 

@@ -1,20 +1,11 @@
 <p align="center">
-  <a href="https://link.context.dev/crm">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./docs/images/powered-by-context-dark.png">
-      <img alt="Powered by Context" height="23" src="./docs/images/powered-by-context.png">
-    </picture>
-  </a>
-</p>
-
-<p align="center">
-  <img alt="stars" height="21" src="https://afterglow.watch/badge/trycompai/crm">
+  <img alt="stars" height="21" src="https://afterglow.watch/badge/happyhunterdigital/crm">
 </p>
 
 <h1 align="center">CRM</h1>
 
 <p align="center">
-  <strong>Comp AI CRM is an open source, CRM designed for AI agents.</strong><br>
+  <strong>Smart Marketing CRM is an open source, agentic CRM designed for AI agents.</strong><br>
   Agentic-first CRM.
 </p>
 
@@ -110,7 +101,7 @@ failed call at a time, and it prints the list at startup:
 [agent] off  Company brand data (Settings → General)
 ```
 
-**Company brand data is [Context](https://link.context.dev/crm)** — the logo, the
+**Company brand data is [Context](https://context.dev)** — the logo, the
 colours, the industry and the real name behind a domain, which is the difference
 between an account that arrives as itself and one that arrives as a grey square with
 its initials in it. It is the one key that is asked for rather than configured: it
@@ -190,7 +181,7 @@ Written up where the work happens, not in a style guide:
 You need [Bun](https://bun.com) and Docker.
 
 ```sh
-git clone https://github.com/trycompai/crm.git && cd crm
+git clone https://github.com/happyhunterdigital/crm.git && cd crm
 cp .env.example .env          # then fill in the values below
 bun install
 

@@ -23,7 +23,7 @@ export function AgentSection() {
 
 				<div className="flex w-full flex-col items-center gap-7 rounded-xl border border-border bg-background px-6 py-12 md:px-12 md:py-[88px]">
 					<p className="text-balance text-center font-medium text-2xl/8 tracking-[-0.01em] md:text-[32px]/10">
-						What should we get done, Lewis?
+						What should we get done today?
 					</p>
 
 					<Composer />
