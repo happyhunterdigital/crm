@@ -129,6 +129,8 @@ General — an admin who cannot redeploy cannot set a variable.
 
 ## Mailbox sync
 
+
+
 Always on, on whichever social provider is configured, so there is no extra redirect
 URI beyond the sign-in one. Scopes are requested at sign-in and gated by
 `requireMailboxAccess()`, because granular consent lets a user untick one and still
