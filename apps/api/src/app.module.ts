@@ -30,6 +30,7 @@ import { SyncModule } from "./sync/sync.module";
 import { TelemetryModule } from "./telemetry/telemetry.module";
 import { TrpcModule } from "./trpc/trpc.module";
 import { UsersModule } from "./users/users.module";
+import { WhatsappModule } from "./whatsapp/whatsapp.module";
 import { WorkspaceModule } from "./workspace/workspace.module";
 
 @Module({
@@ -67,6 +68,7 @@ import { WorkspaceModule } from "./workspace/workspace.module";
 		SsoModule,
 		BackfillModule,
 		TelemetryModule,
+		WhatsappModule,
 	],
 })
 export class AppModule {}

@@ -118,6 +118,30 @@ export class EnvironmentVariables {
 	@IsOptional()
 	@IsString()
 	CRM_TELEMETRY_DISABLED?: string;
+
+	@IsOptional()
+	@IsString()
+	@MinLength(16, {
+		message: "WHATSAPP_INGEST_SECRET must be at least 16 characters.",
+	})
+	WHATSAPP_INGEST_SECRET?: string;
+
+	@IsOptional()
+	@IsUrl(
+		{ require_tld: false, require_protocol: true },
+		{
+			message:
+				"WHATSAPP_BOT_URL must be a full URL with a scheme, like https://us-central1-PROJECT.cloudfunctions.net.",
+		},
+	)
+	WHATSAPP_BOT_URL?: string;
+
+	@IsOptional()
+	@IsString()
+	@MinLength(16, {
+		message: "WHATSAPP_BOT_SECRET must be at least 16 characters.",
+	})
+	WHATSAPP_BOT_SECRET?: string;
 }
 
 export function validateEnv(
