@@ -5,17 +5,30 @@ import {
 	POSTHOG_KEY,
 	POSTHOG_UI_HOST,
 } from "@crm/telemetry/project";
-import { useMountEffect } from "@crm/ui/hooks/use-mount-effect";
+import { useEffect, useRef, useState } from "react";
 import { analyticsAllowed } from "@/lib/analytics";
+import { hasConsent, onConsentChange } from "@/lib/consent";
 
 export type CtaLocation = "hero" | "closing";
 
 export function LandingAnalytics() {
-	useMountEffect(() => {
-		if (!analyticsAllowed(window.location.hostname)) return;
+	const [allowed, setAllowed] = useState(false);
+	const initialised = useRef(false);
+
+	useEffect(() => {
+		const update = () =>
+			setAllowed(analyticsAllowed(window.location.hostname) && hasConsent());
+		update();
+		return onConsentChange(update);
+	}, []);
+
+	useEffect(() => {
+		if (!allowed || initialised.current) return;
+		initialised.current = true;
 
 		import("posthog-js")
 			.then(({ default: posthog }) => {
+				if (!hasConsent()) return;
 				posthog.init(POSTHOG_KEY, {
 					api_host: POSTHOG_HOST,
 					ui_host: POSTHOG_UI_HOST,
@@ -23,7 +36,7 @@ export function LandingAnalytics() {
 				});
 			})
 			.catch(() => {});
-	});
+	}, [allowed]);
 
 	return null;
 }
@@ -33,7 +46,7 @@ export function captureLanding(
 	location: CtaLocation,
 ): void {
 	if (typeof window === "undefined") return;
-	if (!analyticsAllowed(window.location.hostname)) return;
+	if (!analyticsAllowed(window.location.hostname) || !hasConsent()) return;
 
 	import("posthog-js")
 		.then(({ default: posthog }) => {

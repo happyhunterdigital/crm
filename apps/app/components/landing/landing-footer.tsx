@@ -1,5 +1,6 @@
 import { Link } from "@crm/ui/components/link";
 import Logo from "@crm/ui/components/logo";
+import { CookieSettingsButton } from "@/components/cookie-consent";
 import { REPO_LINKS } from "./links";
 import { Wordmark } from "./wordmark";
 
@@ -30,6 +31,7 @@ export function LandingFooter() {
 							{link.label}
 						</Link>
 					))}
+					<CookieSettingsButton />
 				</nav>
 			</div>
 
